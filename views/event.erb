@@ -1,0 +1,65 @@
+<!-- Navigation -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="navbar-header">
+		<a class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<a class="navbar-brand" href="/">Cosplayer'sGuild</a>
+	</div>
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav navbar-left">
+			<li class="active"><a href="/">作り方</a></li>
+			<li class="active"><a href="/events">イベント</a></li>
+			<li><a href="./admin_config">login</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="container">
+	<!-- Page title -->
+	<div class="page-header">
+		<h1 class="text-primary">Cosplayer'sGuild</h1>
+	</div>
+
+	<!-- Page contents -->
+	<div class="row">
+		<!-- Content -->
+		<div class="col-sm-9">
+			<h2 class="headline">イベント記事＠まとめ</h2>
+
+			<hr>
+
+			<button id="get_news" type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-refresh"></span> get latest news!!
+			</button>
+
+			<ul id="article_wrapper" class="media-list">
+				<% @events.each.with_index do |art,i| %>
+					<li class="article_box media">
+						<a class="pull-left" href="<%= art.url %>">
+							<img class="media-object" src="img/twitter-icon.png">
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading"><%= art.title %></h4>
+							<div>
+								<span class="article-id"><%= art.id %>.</span> <span class="article-intro"><%= art.introduction %></span>
+							</div>
+							<div class="article-url">url: <%= art.url %></div>
+							<div class="article-user">user: <%= art.user %></div>
+						</div>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+		
+		<!-- Sidebar -->
+		<!-- If you want to use, delete this comment-out.
+		<div class="col-sm-3">
+			sidebar
+		</div>
+		-->
+	</div>
+</div>
+

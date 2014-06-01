@@ -1,0 +1,11 @@
+.sass-cache/
+development.db
+
+.DS_STORE
+*.swp
+*.rdc
+/pkg
+/doc/api
+/Gemfile.lock
+vendor/bundle
+

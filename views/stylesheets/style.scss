@@ -1,0 +1,11 @@
+$headline: red;
+
+.headline{
+	color:$headline_color;
+}
+
+.article{
+	.long{
+		width:500px;
+	}
+}
